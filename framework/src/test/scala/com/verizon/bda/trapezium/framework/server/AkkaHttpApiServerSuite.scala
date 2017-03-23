@@ -69,7 +69,7 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
 
     val port = ApplicationManager.getEmbeddedServer.getBindPort
     val method1 = new GetMethod(s"http://localhost:${port}/rest-api/test")
-    method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
+   // method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
 
     client.executeMethod(method1)
     assert(method1.getResponseBodyAsString.contains("Hello from EndPoint 1"))
@@ -81,7 +81,7 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
     method1.getResponseHeaders
     val method2 = new GetMethod(s"http://localhost:${port}/rest-api/test2")
 
-    method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0660")
+   // method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0660")
     // logger.debug("request headers we have are " + printheaders(method2.getResponseHeaders))
     client.executeMethod(method2)
     // logger.debug("reponse headers we have are " + printheaders(method2.getResponseHeaders))
@@ -89,7 +89,7 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
 
 
     // now execute method 1 again. This should hit the cache. Now even api
-    method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
+   // method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
     client.executeMethod(method2)
    // key is same response should be different as uri path is different
     assert(!method2.getResponseBodyAsString.contains("Hello from EndPoint 1"))
@@ -103,13 +103,13 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
 
     val port = ApplicationManager.getEmbeddedServer.getBindPort
     val method1 = new GetMethod(s"http://localhost:${port}/rest-api/test")
-    method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
+   // method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
 
     client.executeMethod(method1)
     assert(method1.getResponseBodyAsString.contains("Hello from EndPoint 1"))
 
     val method2 = new GetMethod(s"http://localhost:${port}/rest-api/test2")
-    method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0660")
+ //   method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0660")
     // logger.debug("request headers we have are " + printheaders(method2.getResponseHeaders))
     client.executeMethod(method2)
     // logger.debug("reponse headers we have are " + printheaders(method2.getResponseHeaders))
@@ -117,7 +117,7 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
 
 
     // now execute method 1 again. This should hit the cache. look at output in console
-    method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
+  //  method2.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM0987")
     client.executeMethod(method2)
     // Because caching is off therefore even we are usimh same cache-id it should
     // ignore cache-id altogether.
@@ -131,7 +131,7 @@ class AkkaHttpApiServerSuite extends FunSuite with BeforeAndAfterAll {
 
     val port = ApplicationManager.getEmbeddedServer.getBindPort
     val method1 = new GetMethod(s"http://localhost:${port}/rest-api/actortestjson")
-    method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM098F")
+ //   method1.setRequestHeader(CacheRouteUtils.CACHE_ID, "8765767NHM098F")
     method1.setRequestHeader("Content-Type", "application/json")
 
     logger.debug("request headers we have are " + printheaders(method1.getRequestHeaders))

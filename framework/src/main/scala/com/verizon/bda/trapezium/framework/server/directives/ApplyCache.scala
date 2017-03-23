@@ -39,8 +39,7 @@ class ApplyCache() {
   Future[akka.http.scaladsl.server.RouteResult]
   = {
 
-    val cacheId = ctx.request.getHeader(CacheRouteUtils.CACHE_ID)
-    val no_cache_Directive = ctx.request.getHeader(CacheRouteUtils.NO_CACHE)
+
     val cache_turnoff_switch = CacheConfig.config.getBoolean("cache_turnoff_switch")
 
     var uri_path = ""
@@ -56,6 +55,8 @@ class ApplyCache() {
       return endPoint.route(ctx)
 
     }
+    val cacheId = ctx.request.getHeader(CacheRouteUtils.CACHE_ID)
+    val no_cache_Directive = ctx.request.getHeader(CacheRouteUtils.NO_CACHE)
 
     // no-cache is standrad dire-ctive to avoid cache.
     // val content_type = ctx.request.getHeader(CacheRouteUtils.CONTENT_TYPE)
