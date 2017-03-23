@@ -24,7 +24,7 @@ import com.verizon.bda.trapezium.cache.CacheConfig
 class AkkaRouterStartUpTest extends TestSuiteBase {
 
 
-  test("cache conf load  test") {
+  /* test("cache conf load  test") {
 
 
     AkkaRouterStartUp.loadConfig()
@@ -39,6 +39,6 @@ class AkkaRouterStartUpTest extends TestSuiteBase {
       equals("http://localhost:60591/pools"))
 
 
-  }
+  } */
 
 }

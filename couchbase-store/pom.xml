@@ -99,18 +99,7 @@
             <version>${cache.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.couchbase.mock</groupId>
-            <artifactId>CouchbaseMock</artifactId>
-            <version>${couch.mock.version}</version>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>  <!-- declare  the exclusion here -->
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>log4j-over-slf4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
 
 
     </dependencies>
