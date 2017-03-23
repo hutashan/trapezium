@@ -18,8 +18,7 @@
     <module>sparkcassandra-connector</module>
     <module>couchbase-store</module>
     <module>cache</module>
-    <module>cassandra-dao</module>
-  </modules>
+    </modules>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
