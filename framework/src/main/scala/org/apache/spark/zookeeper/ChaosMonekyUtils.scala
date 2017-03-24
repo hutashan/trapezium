@@ -96,7 +96,7 @@ class ChaosMonekyUtils(application_id : String ,
 
        } catch {
          case ex : Exception => {
-           logger.error("Error while fetching list of excecutor " +
+           logger.info("Error while fetching list of excecutor " +
              " for application" , ex.getMessage)
          }
        }
