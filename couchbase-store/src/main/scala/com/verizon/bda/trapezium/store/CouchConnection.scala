@@ -1,6 +1,6 @@
 package com.verizon.bda.trapezium.store
 
-import com.couchbase.client.CouchbaseClient;
+import com.couchbase.client.CouchbaseClient
 
 /**
   * Created by v468328 on 9/23/16.
